@@ -14,7 +14,7 @@ const categories = [
   { id: "1", title: "Exercise", tasks: "12 Tasks", image: require("./assets/exercise.jpg") },
   { id: "2", title: "Study", tasks: "12 Tasks", image: require("./assets/study.jpg") },
   { id: "3", title: "Code", tasks: "10 Tasks", image: require("./assets/coding.jpeg") },
-  { id: "4", title: "Cook", tasks: "8 Tasks", image: require("./assets/cooking.jpeg") },
+  { id: "4", title: "Cook", tasks: "8 Tasks", image: require("./assets/Cooking.jpeg") },
   { id: "5", title: "Read", tasks: "15 Tasks", image: require("./assets/reading.jpeg") },
   { id: "6", title: "Write", tasks: "7 Tasks", image: require("./assets/Writing.jpeg") },
   { id: "7", title: "Meditate", tasks: "5 Tasks", image: require("./assets/meditating.jpeg") },
