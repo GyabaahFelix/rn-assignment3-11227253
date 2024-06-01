@@ -1,88 +1,126 @@
-import React from 'react';
-import { StyleSheet, Image, Text, View, ScrollView, TextInput, FlatList } from 'react-native';
+import React from "react";
+import {
+  StyleSheet,
+  Image,
+  Text,
+  View,
+  ScrollView,
+  TextInput,
+  Button,
+  FlatList,
+} from "react-native";
 
 const categories = [
-  { name: 'Exercise', tasks: 12, imageUri: 'https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/yenajbis4sj-2%3A5?alt=media&token=b3e31957-2b70-4bf2-b517-37dc04505aae' },
-  { name: 'Study', tasks: 12, imageUri: 'https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/yenajbis4sj-2%3A16?alt=media&token=044c0378-28a9-4907-9aa2-dd5aa5e6a2ca' },
-  { name: 'Code', tasks: 8, imageUri: 'https://example.com/code-image' },
-  { name: 'Cook', tasks: 5, imageUri: 'https://example.com/cook-image' },
-  { name: 'Read', tasks: 10, imageUri: 'https://example.com/read-image' },
-  { name: 'Clean', tasks: 7, imageUri: 'https://example.com/clean-image' },
-  { name: 'Meditate', tasks: 4, imageUri: 'https://example.com/meditate-image' },
-  { name: 'Shop', tasks: 3, imageUri: 'https://example.com/shop-image' },
+  { id: "1", title: "Exercise", tasks: "12 Tasks", image: require("./assets/exercise.jpg") },
+  { id: "2", title: "Study", tasks: "12 Tasks", image: require("./assets/study.jpg") },
+  { id: "3", title: "Code", tasks: "10 Tasks", image: require("./assets/coding.jpeg") },
+  { id: "4", title: "Cook", tasks: "8 Tasks", image: require("./assets/cooking.jpeg") },
+  { id: "5", title: "Read", tasks: "15 Tasks", image: require("./assets/reading.jpeg") },
+  { id: "6", title: "Write", tasks: "7 Tasks", image: require("./assets/Writing.jpeg") },
+  { id: "7", title: "Meditate", tasks: "5 Tasks", image: require("./assets/meditating.jpeg") },
+  { id: "8", title: "Draw", tasks: "9 Tasks", image: require("./assets/drawing.jpeg") },
+  { id: "9", title: "Gardening", tasks: "6 Tasks", image: require("./assets/Gardening.jpeg") },
+  { id: "10", title: "Yoga", tasks: "4 Tasks", image: require("./assets/yoga.jpeg") },
+  { id: "11", title: "Dance", tasks: "10 Tasks", image: require("./assets/dance.jpeg") },
+  { id: "12", title: "Music", tasks: "12 Tasks", image: require("./assets/music.jpeg") },
+  { id: "13", title: "Travel", tasks: "3 Tasks", image: require("./assets/traveling.jpeg") },
+  { id: "14", title: "Photography", tasks: "5 Tasks", image: require("./assets/photography.jpeg") },
+  { id: "15", title: "Volunteer", tasks: "2 Tasks", image: require("./assets/volunteer.jpeg") },
 ];
 
 const ongoingTasks = [
-  { key: '1', title: 'Mobile App Development' },
-  { key: '2', title: 'Web Development' },
-  { key: '3', title: 'Push Ups' },
-  { key: '4', title: 'Learn React Native' },
-  { key: '5', title: 'Grocery Shopping' },
-  { key: '6', title: 'Clean the House' },
-  { key: '7', title: 'Finish Homework' },
-  { key: '8', title: 'Read a Book' },
-  { key: '9', title: 'Meditate' },
-  { key: '10', title: 'Cook Dinner' },
-  { key: '11', title: 'Exercise' },
-  { key: '12', title: 'Write a Blog Post' },
-  { key: '13', title: 'Learn a New Recipe' },
-  { key: '14', title: 'Organize Workspace' },
-  { key: '15', title: 'Practice Yoga' },
+  { id: "1", title: "Mobile App Development" },
+  { id: "2", title: "Web Development" },
+  { id: "3", title: "Push Ups" },
+  { id: "4", title: "React Native Project" },
+  { id: "5", title: "Cooking Dinner" },
+  { id: "6", title: "Reading a Book" },
+  { id: "7", title: "Writing a Blog Post" },
+  { id: "8", title: "Meditation Session" },
+  { id: "9", title: "Sketching" },
+  { id: "10", title: "Yoga Routine" },
+  { id: "11", title: "Dancing Practice" },
+  { id: "12", title: "Music Practice" },
+  { id: "13", title: "Photo Editing" },
+  { id: "14", title: "Volunteering" },
+  { id: "15", title: "Travel Planning" },
 ];
 
 export default function Task() {
   return (
     <ScrollView style={styles.Task}>
-      <View style={styles.Header}>
-        <View style={styles.Profile}>
-          <Text style={styles.HelloDevs}>Hello, Devs</Text>
-          <Text style={styles.TasksToday}>14 tasks today</Text>
-        </View>
-        <Image
-          style={styles.ProfileImage}
-          source={{
-            uri: 'https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/yenajbis4sj-1%3A13?alt=media&token=5665282e-63eb-4e15-86ff-6a714db842de',
-          }}
-        />
-      </View>
-      <View style={styles.SearchContainer}>
-        <View style={styles.SearchBox}>
+      <View style={styles.Group734}>
+        <View style={styles.Frame1}>
+          <View style={styles.Group1}>
+            <Text style={styles.HelloDevs}>Hello, Devs</Text>
+            <Text style={styles._14TasksToday}>14 tasks today</Text>
+          </View>
           <Image
-            style={styles.SearchIcon}
+            style={styles.ProfileImage}
             source={{
-              uri: 'https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/yenajbis4sj-1%3A40?alt=media&token=c631004c-6e3b-42b9-9a3a-6c86364a32b4',
+              uri: "https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/xx4hwqqplk-1%3A13?alt=media&token=af80a8ad-1f35-47e2-b60a-77e9f97ef281",
             }}
           />
-          <TextInput style={styles.SearchInput} placeholder="Search" />
         </View>
-        <Image
-          style={styles.FilterIcon}
-          source={{
-            uri: 'https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/yenajbis4sj-1%3A31?alt=media&token=c8104069-f650-41f3-b592-8024aa8d80d9',
+        <View style={styles.Search3}>
+          <View style={styles.SearchBox}>
+            <View style={styles.Group5}>
+              <Image
+                style={styles.MynauiSearch}
+                source={{
+                  uri: "https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/xx4hwqqplk-1%3A40?alt=media&token=bdf907ad-cfb0-48e2-9b78-d710869a91e1",
+                }}
+              />
+              <TextInput
+                style={styles.SearchInput}
+                placeholder="Search"
+                placeholderTextColor="rgba(0,0,0,1)"
+              />
+            </View>
+          </View>
+          <Image
+            style={styles.Filter}
+            source={{
+              uri: "https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/xx4hwqqplk-1%3A31?alt=media&token=e9c4aa03-4ed3-49b9-81ef-d2fb439be484",
+            }}
+          />
+        </View>
+        <Text style={styles.Categories}>Categories</Text>
+        <FlatList
+          data={categories}
+          renderItem={({ item }) => (
+            <View style={styles.CategoriesCard}>
+              <View style={styles.Group7}>
+                <Text style={styles.Exercise}>{item.title}</Text>
+                <Text style={styles._12Tasks}>{item.tasks}</Text>
+              </View>
+              <Image
+                style={styles.CategoryImage}
+                source={item.image}
+              />
+            </View>
+          )}
+          keyExtractor={(item) => item.id}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        />
+        <Text style={styles.OngoingTask}>Ongoing Task</Text>
+        <FlatList
+          data={ongoingTasks}
+          renderItem={({ item }) => (
+            <View style={styles.OngoingTasksCards}>
+              <Text style={styles.TaskTitle}>{item.title}</Text>
+            </View>
+          )}
+          keyExtractor={(item) => item.id}
+        />
+        <Button
+          title="Add Task"
+          onPress={() => {
+            // Add task logic here
           }}
         />
       </View>
-      <Text style={styles.Categories}>Categories</Text>
-      <ScrollView horizontal style={styles.CategoriesContainer}>
-        {categories.map((category, index) => (
-          <View key={index} style={styles.CategoryCard}>
-            <View style={styles.CategoryTextContainer}>
-              <Text style={styles.CategoryName}>{category.name}</Text>
-              <Text style={styles.CategoryTasks}>{category.tasks} Tasks</Text>
-            </View>
-            <Image style={styles.CategoryImage} source={{ uri: category.imageUri }} />
-          </View>
-        ))}
-      </ScrollView>
-      <Text style={styles.OngoingTasksTitle}>Ongoing Task</Text>
-      <FlatList
-        data={ongoingTasks}
-        renderItem={({ item }) => (
-          <View style={styles.OngoingTaskCard}>
-            <Text style={styles.OngoingTaskText}>{item.title}</Text>
-          </View>
-        )}
-      />
     </ScrollView>
   );
 }
@@ -91,109 +129,114 @@ const styles = StyleSheet.create({
   Task: {
     flex: 1,
     padding: 20,
-    backgroundColor: 'rgba(247,240,232,1)',
+    backgroundColor: "rgba(247,240,232,1)",
   },
-  Header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+  Group734: {
+    flex: 1,
+  },
+  Frame1: {
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 20,
   },
-  Profile: {
-    flexDirection: 'column',
+  Group1: {
+    flex: 1,
   },
   HelloDevs: {
     fontSize: 32,
-    fontWeight: '700',
-    color: 'rgba(0,0,0,1)',
+    fontWeight: "700",
+    color: "rgba(0,0,0,1)",
   },
-  TasksToday: {
+  _14TasksToday: {
     fontSize: 12,
-    fontWeight: '500',
-    color: 'rgba(0,0,0,1)',
+    fontWeight: "500",
+    color: "rgba(0,0,0,1)",
   },
   ProfileImage: {
     width: 50,
     height: 50,
     borderRadius: 25,
   },
-  SearchContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+  Search3: {
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 20,
   },
   SearchBox: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: 'rgba(251,249,247,1)',
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "rgba(251,249,247,1)",
     borderRadius: 14,
     padding: 10,
-    flex: 1,
-    marginRight: 10,
+    backgroundColor: "rgba(251,249,247,1)",
   },
-  SearchIcon: {
+  Group5: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  MynauiSearch: {
     width: 24,
     height: 24,
     marginRight: 10,
   },
   SearchInput: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: "rgba(0,0,0,1)",
     flex: 1,
   },
-  FilterIcon: {
-    width: 24,
-    height: 24,
+  Filter: {
+    width: 50,
+    height: 50,
   },
   Categories: {
     fontSize: 20,
-    fontWeight: '700',
-    color: 'rgba(0,0,0,1)',
+    fontWeight: "700",
+    color: "rgba(0,0,0,1)",
     marginBottom: 10,
   },
-  CategoriesContainer: {
-    flexDirection: 'row',
-    marginBottom: 20,
-  },
-  CategoryCard: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    backgroundColor: 'rgba(251,249,247,1)',
+  CategoriesCard: {
+    flex: 1,
+    padding: 15,
     borderRadius: 15,
-    padding: 10,
-    marginRight: 10,
+    backgroundColor: "rgba(251,249,247,1)",
+    marginRight: 20, 
   },
-  CategoryTextContainer: {
+  Group7: {
     marginBottom: 10,
   },
-  CategoryName: {
+  Exercise: {
     fontSize: 16,
-    fontWeight: '700',
-    color: 'rgba(0,0,0,1)',
+    fontWeight: "700",
+    color: "rgba(0,0,0,1)",
   },
-  CategoryTasks: {
+  _12Tasks: {
     fontSize: 12,
-    fontWeight: '400',
-    color: 'rgba(0,0,0,1)',
+    fontWeight: "400",
+    color: "rgba(0,0,0,1)",
   },
   CategoryImage: {
-    width: 151,
-    height: 132,
+    width: "100%",
+    height: 150, 
+    borderRadius: 10,
   },
-  OngoingTasksTitle: {
+  OngoingTask: {
     fontSize: 20,
-    fontWeight: '700',
-    color: 'rgba(0,0,0,1)',
+    fontWeight: "700",
+    color: "rgba(0,0,0,1)",
     marginBottom: 10,
   },
-  OngoingTaskCard: {
-    backgroundColor: 'rgba(251,249,247,1)',
-    borderRadius: 15,
+  OngoingTasksCards: {
     padding: 15,
+    borderRadius: 15,
+    backgroundColor: "rgba(251,249,247,1)",
     marginBottom: 10,
   },
-  OngoingTaskText: {
+  TaskTitle: {
     fontSize: 16,
-    fontWeight: '700',
-    color: 'rgba(0,0,0,1)',
+    fontWeight: "700",
+    color: "rgba(0,0,0,1)",
   },
 });
