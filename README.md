@@ -29,7 +29,7 @@ The main component of the application, responsible for rendering the entire UI. 
 
 ## Screenshots
 
-Here is the screenshot of the app in action:
+![Main Screen](../assets/screenshot.png)
 
 ### Main Screen
 (./assets/screenshot.png)
