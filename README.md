@@ -32,7 +32,7 @@ The main component of the application, responsible for rendering the entire UI. 
 Here is the screenshot of the app in action:
 
 ### Main Screen
-![Main Screen](assets/screenshot.png)
+(./assets/screenshot.png)
 
 ## Author
 
